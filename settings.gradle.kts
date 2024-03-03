@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Dagger2"
 include(":app")
- 
+include(":data")
