@@ -9,6 +9,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
+
         applicationId = "com.example.dagger2"
         minSdk = 24
         targetSdk = 33
@@ -31,17 +32,20 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kapt {
+        generateStubs = true
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.2"
+        kotlinCompilerExtensionVersion = "1.4.2"
     }
     packaging {
         resources {
@@ -69,7 +73,10 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    implementation(project ( ":data"))
+    implementation(project ( ":data2"))
+    implementation(project ( ":core"))
+    implementation(project ( ":task"))
+    implementation(project ( ":network"))
     implementation("com.google.dagger:dagger:2.46.1")
     kapt("com.google.dagger:dagger-compiler:2.46.1")
 }

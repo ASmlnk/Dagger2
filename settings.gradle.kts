@@ -15,4 +15,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Dagger2"
 include(":app")
-include(":data")
+include(":data2")
+include(":core")
+include(":task")
+include(":network")
